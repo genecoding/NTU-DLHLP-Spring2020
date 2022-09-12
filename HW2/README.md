@@ -15,7 +15,7 @@
 * Option 1. 自己找一個不是 StarGAN-VC，也不是 HW2-1 的 model，實際 train 看看。
 
 ## Reference
-[Multi-target Voice Conversion without Parallel Data by Adversarially Learning Disentangled Audio Representations][p1], J Chou et al.
+[Multi-target Voice Conversion without Parallel Data by Adversarially Learning Disentangled Audio Representations][p1], J Chou *et al.*
 
 
 
