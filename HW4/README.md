@@ -10,7 +10,8 @@ BERT
   * Code in MEV() and MEV_Anisotropy() is ambiguous and seems incorrect, I tried my best guess... Also, the code uses word embedding to calculate MEV, 
     but [the paper](#Reference) uses occurrence matrix... anyway, done.
   * self_similarity()
-    * I was running the code on the Colab, due to GPU memory constraint I had to do it that way. If there is sufficient GPU memory, it can be coded this way:
+    * I was running the code on the Colab, due to GPU memory constraint I could only do it that way. If there is sufficient GPU memory, 
+      it can be coded with a more elegant way:
       ```
       def self_similarity():
           results = {}
