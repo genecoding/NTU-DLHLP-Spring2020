@@ -2,8 +2,8 @@
 [End-to-end Speech Recognition]
 ## Note
 ## Reference
-* [Joint CTC-Attention based End-to-End Speech Recognition using Multi-task Learning], S Kim et al.
-* [Advances in Joint CTC-Attention based End-to-End Speech Recognition with a Deep CNN Encoder and RNN-LM], T Hori et al.
+* [Joint CTC-Attention based End-to-End Speech Recognition using Multi-task Learning], S Kim *et al.*
+* [Advances in Joint CTC-Attention based End-to-End Speech Recognition with a Deep CNN Encoder and RNN-LM], T Hori *et al.*
 
 
 
