@@ -12,7 +12,7 @@ BERT
   * self_similarity()
     * I was running the code on the Colab, due to GPU memory constraint I could only do it that way. If there is sufficient GPU memory, 
       it can be coded with a more elegant way:
-      ```
+      ```python
       def self_similarity():
           results = {}
           for model in MODELS:
@@ -44,10 +44,13 @@ BERT
   |2      |0.9605 |0.9631     |0.9580  |
   |4      |0.9417 |0.9420     |0.9414  |
   |6      |0.9029 |0.9053     |0.9005  |
-* In fact, the model can learn valid (not actually correct) tag sequences by itself without post-processing, and it's surely a better way to do so.
+* In fact, the model can learn valid (not definitely correct) tag sequences by itself without post-processing, and it's surely a better way to do so.
 
 ### 4-2
-### 4-3
+* Bonus task: Rank loss
+  * $L_{dist}^{rank} = \sum_{i,j>i} [1 - sign(d_i-d_j)(\hat d_i-\hat d_j)]^+$ (d: depth)
+    * A wierd loss function...
+    * Rank here is ambiguous, 
 
 ## Reference
 [How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings][p1], K Ethayarajh
