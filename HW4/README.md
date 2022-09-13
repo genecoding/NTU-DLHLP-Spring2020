@@ -6,11 +6,11 @@ BERT
 ## Note
 ### 4-1
 #### 4-1-1 (Natural Language Inference Task & Contextualization Issue)
-* similarity_student.py (offered from TA) vs similarity.py (coded by myself)
+* similarity_student.py (offered from TA) and similarity.py (coded by myself)
   * Code in MEV() and MEV_Anisotropy() is ambiguous and seems incorrect, I tried my best guess... Also, the code uses word embeddings to calculate MEV, 
     but [the paper](#Reference) uses occurrence matrix... anyway, done.
-  * self_similarity()
-    * I was running the code on the Colab, due to GPU memory constraint I could only do it that way. If there is sufficient GPU memory, 
+  * self_similarity() in similarity.py
+    * I ran the code on the Colab, due to GPU memory constraint I cound only do it that way. If there is sufficient GPU memory, 
       it can be coded with a more elegant way:
       ```python
       def self_similarity():
@@ -38,19 +38,18 @@ BERT
           return results
       ```
 #### 4-1-2 (Chinese Word Segmentation)
-* Although TA asks us to put the post-processing of sequence label inside the model (in modeling_bert.py), I don't think it's a good idea, since it will affect training. It's better to put the post-processing outside the model (e.g example.py). I actually tried the both, as the result shows puttiing the post-processing inside the model deteriorate the performance (when the epoch becomes larger, the performance becomes worse).
+* Although TA asks us to put the post-processing of sequence label inside the model (in modeling_bert.py), I don't think it's a good idea, since it will affect training. It's better to put the post-processing outside the model (e.g example.py). I actually tried the both, the result shows puttiing the post-processing inside the model deteriorates the performance (when the epoch becomes larger, the performance becomes worse).
   | epoch |  f1   | precision | recall |  
   |-------|-------|-----------|--------|  
   |2      |0.9605 |0.9631     |0.9580  |
   |4      |0.9417 |0.9420     |0.9414  |
   |6      |0.9029 |0.9053     |0.9005  |
-* In fact, the model can learn valid (not definitely correct) tag sequences by itself without post-processing, and it's surely a better way to do so.
+* In fact, the model can learn valid (not definitely correct) tag sequences by itself without post-processing, and it's surely a better way to do.
 
 ### 4-2
 * Bonus task: Rank loss
   * $L_{dist}^{rank} = \sum_{i,j>i} [1 - sign(d_i-d_j)(\hat d_i-\hat d_j)]^+$ (d: depth)
-    * A weird loss function...
-    * Rank here is ambiguous, it looks like neither rank loss (hinge loss) in machine learning nor rank in a rank tree...
+    * A weird loss function... Rank here is ambiguous, it looks like neither rank loss (hinge loss) in machine learning nor rank in a rank tree... anyway, done.
 
 ## Reference
 [How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings][p1], K Ethayarajh
