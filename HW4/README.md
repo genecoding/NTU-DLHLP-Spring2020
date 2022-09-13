@@ -49,8 +49,8 @@ BERT
 ### 4-2
 * Bonus task: Rank loss
   * $L_{dist}^{rank} = \sum_{i,j>i} [1 - sign(d_i-d_j)(\hat d_i-\hat d_j)]^+$ (d: depth)
-    * A wierd loss function...
-    * Rank here is ambiguous, 
+    * A weird loss function...
+    * Rank here is ambiguous, it looks like neither rank loss (hinge loss) in machine learning nor rank in a rank tree...
 
 ## Reference
 [How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings][p1], K Ethayarajh
