@@ -52,7 +52,8 @@ BERT
     * A weird loss function... rank here is ambiguous, it looks like neither rank loss (hinge loss) in machine learning nor rank in a rank tree... anyway, done.
 
 ## Reference
-[How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings][p1], K Ethayarajh
+* https://github.com/huggingface/transformers
+* [How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings][p1], K Ethayarajh
 
 
 
