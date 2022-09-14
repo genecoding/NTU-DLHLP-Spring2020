@@ -16,7 +16,7 @@
   * https://github.com/jjery2243542/adaptive_voice_conversion
 
 ## Reference
-[Multi-target Voice Conversion without Parallel Data by Adversarially Learning Disentangled Audio Representations][p1], J Chou *et al.*
+* [Multi-target Voice Conversion without Parallel Data by Adversarially Learning Disentangled Audio Representations][p1], J Chou *et al.*
 
 
 
