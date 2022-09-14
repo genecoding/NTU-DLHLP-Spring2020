@@ -11,7 +11,7 @@ BERT
     but [the paper](#Reference) uses occurrence matrix... anyway, done.
   * self_similarity() in similarity.py
     * I ran the code on the Colab, due to GPU memory constraint I cound only do it that way. If there is sufficient GPU memory, 
-      it can be coded with a more elegant way:
+      it can be coded in a more elegant way:
       ```python
       def self_similarity():
           results = {}
