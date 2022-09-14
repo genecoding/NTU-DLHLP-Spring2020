@@ -38,7 +38,7 @@ BERT
           return results
       ```
 #### 4-1-2 (Chinese Word Segmentation)
-* Although TA asks us to put the post-processing of sequence label inside the model (in modeling_bert.py), I don't think it's a good idea, since it will affect training. It's better to put the post-processing outside the model (e.g example.py). I actually tried the both, the result shows puttiing the post-processing inside the model deteriorates the performance (when the epoch becomes larger, the performance becomes worse).
+* Although TA asks us to put the post-processing of sequence label inside the model (in modeling_bert.py), I don't think it's a good idea, since it will affect training. It's better to put the post-processing outside the model (e.g. example.py). I actually tried the both, the result shows puttiing the post-processing inside the model deteriorates the performance (when the epoch becomes larger, the performance becomes worse).
   | epoch |  f1   | precision | recall |  
   |-------|-------|-----------|--------|  
   |2      |0.9605 |0.9631     |0.9580  |
@@ -47,9 +47,9 @@ BERT
 * In fact, the model can learn valid (not definitely correct) tag sequences by itself without post-processing, and it's surely a better way to do.
 
 ### 4-2
-* Bonus task: Rank loss
+* Bonus task: rank loss
   * $L_{dist}^{rank} = \sum_{i,j>i} [1 - sign(d_i-d_j)(\hat d_i-\hat d_j)]^+$ (d: depth)
-    * A weird loss function... Rank here is ambiguous, it looks like neither rank loss (hinge loss) in machine learning nor rank in a rank tree... anyway, done.
+    * A weird loss function... rank here is ambiguous, it looks like neither rank loss (hinge loss) in machine learning nor rank in a rank tree... anyway, done.
 
 ## Reference
 [How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings][p1], K Ethayarajh
