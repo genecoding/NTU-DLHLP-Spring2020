@@ -3,8 +3,8 @@
 
 ## Note
 ### 2-1
-* In solver.py, "train D / Pretrain D" actually trains the autoencoder (encoder+decoder) and "train G / Pertrain G" actually trains the classifier1, of the stage 1 in 
-  [the paper](#Reference); "patchGAN" trains the stage 2. The classifier1 is necessary to separate the speaker characteristics from the linguistic content in speech signals.
+* In solver.py, "pretrain_G" actually trains the autoencoder (encoder+decoder) and "pretrain_D" actually trains the classifier1, of the stage 1 in 
+  [the paper](#Reference); "train" trains the stage 1 and "patchGAN" trains the stage 2. The classifier1 is necessary to separate the speaker characteristics from the linguistic content in speech signals.
 * hint: 大約跑 10000 個 steps 即可有不錯的結果。
 * 請嘗試轉成p1 和 p2 interpolation 的聲音
   * \# add for interpolation of p1 & p2, in solver.py & convert.py
