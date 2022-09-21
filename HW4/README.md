@@ -7,9 +7,8 @@ BERT
 ### 4-1
 #### 4-1-1 (Natural Language Inference Task & Contextualization Issue)
 * similarity_student.py (offered from TA) and similarity.py (coded by myself)
-  * Code in MEV() and MEV_Anisotropy() is ambiguous and seems incorrect, I tried my best guess... Also, the code uses word embeddings to calculate MEV, 
-    but [the paper](#Reference) uses occurrence matrix... anyway, done.
-  * self_similarity() in similarity.py
+  * Code in `MEV()` and `MEV_Anisotropy()` in similarity_student.py is ambiguous and seems incorrect, I tried my best guess... Also, the code uses word embeddings to       calculate MEV, but [the paper](#Reference) uses occurrence matrix... anyway, done.
+  * `self_similarity()` in similarity.py
     * I ran the code on the Colab, due to GPU memory constraint I cound only do it that way. If there is sufficient GPU memory, 
       it can be coded in a more elegant way:
       ```python
@@ -38,7 +37,7 @@ BERT
           return results
       ```
 #### 4-1-2 (Chinese Word Segmentation)
-* Although TA asks us to put the post-processing of sequence label inside the model (in modeling_bert.py), I don't think it's a good idea, since it will affect training. It's better to put the post-processing outside the model (e.g. example.py). I actually tried the both, the result shows puttiing the post-processing inside the model deteriorates the performance (when the epoch becomes larger, the performance becomes worse).
+* Although TA asks us to put the post-processing of sequence label inside the model (in modeling_bert.py), I don't think it's a good idea, since it will affect training. It's better to put the post-processing outside the model (e.g. example.py). I actually tried the both, the result shows putting the post-processing inside the model deteriorates the performance (when the epoch becomes larger, the performance becomes worse).
   | epoch |  f1   | precision | recall |  
   |-------|-------|-----------|--------|  
   |2      |0.9605 |0.9631     |0.9580  |
