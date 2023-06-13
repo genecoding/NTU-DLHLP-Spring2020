@@ -6,6 +6,18 @@ My implementation for the homework from the course of National Taiwan University
 * [Syllabus]
 * [Lecture videos]
 
+## Contents
+### HW1 
+Speech Recognition
+### HW2
+Voice Conversion
+### HW3
+Speaker Separation
+### HW4
+BERT / BERT Application
+### HW5
+Text Style Transfer
+
 
 
 [Syllabus]: https://speech.ee.ntu.edu.tw/~hylee/dlhlp/2020-spring.php
